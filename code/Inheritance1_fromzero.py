@@ -1455,103 +1455,103 @@ if __name__ == "__main__" :
     for i in range(int(waiter_num/2)) :
         here = AI(8, 0, 100)
         waiters.append(here)
-        f.readline()
-        s = f.readline()
-        digits = re.findall(r'-?\d+', s)
-        for ii in range(8):
-            for jj in range(8):
-                here.score_matrix[ii][jj]=int(digits[ii*8+jj])
-        s = f.readline()
-        digits = re.findall(r'-?\d+', s)
-        for ii in range(8):
-            digits=re.findall(r'-?\d+',s)
-            for jj in range(8):
-                here.score_matrix1[ii][jj]=int(digits[ii*8+jj])
-        s = f.readline()
-        digits = re.findall(r'-?\d+', s)
-        for ii in range(8) :
-            digits = re.findall(r'-?\d+', s)
-            for jj in range(8) :
-                here.arb_matrix[ii][jj] =int(digits[ii*8+jj])
-        s = f.readline()
-        digits = re.findall(r'-?\d+', s)
-        for ii in range(8) :
-            digits = re.findall(r'-?\d+', s)
-            for jj in range(8) :
-                here.arb_matrix1[ii][jj] = int(digits[ii*8+jj])
-        s=f.readline()
-        digits=re.findall(r'-?\d+',s)
-        here.c1=1
-        for ii in range(3):
-            here.c2[ii]=int(digits[ii+1])
-        for ii in range(3):
-            here.c3[ii]=int(digits[ii+4])
-        for ii in range(3):
-            here.c4[ii]=int(digits[ii+7])
-    product(waiters)
+    #     f.readline()
+    #     s = f.readline()
+    #     digits = re.findall(r'-?\d+', s)
+    #     for ii in range(8):
+    #         for jj in range(8):
+    #             here.score_matrix[ii][jj]=int(digits[ii*8+jj])
+    #     s = f.readline()
+    #     digits = re.findall(r'-?\d+', s)
+    #     for ii in range(8):
+    #         digits=re.findall(r'-?\d+',s)
+    #         for jj in range(8):
+    #             here.score_matrix1[ii][jj]=int(digits[ii*8+jj])
+    #     s = f.readline()
+    #     digits = re.findall(r'-?\d+', s)
+    #     for ii in range(8) :
+    #         digits = re.findall(r'-?\d+', s)
+    #         for jj in range(8) :
+    #             here.arb_matrix[ii][jj] =int(digits[ii*8+jj])
+    #     s = f.readline()
+    #     digits = re.findall(r'-?\d+', s)
+    #     for ii in range(8) :
+    #         digits = re.findall(r'-?\d+', s)
+    #         for jj in range(8) :
+    #             here.arb_matrix1[ii][jj] = int(digits[ii*8+jj])
+    #     s=f.readline()
+    #     digits=re.findall(r'-?\d+',s)
+    #     here.c1=1
+    #     for ii in range(3):
+    #         here.c2[ii]=int(digits[ii+1])
+    #     for ii in range(3):
+    #         here.c3[ii]=int(digits[ii+4])
+    #     for ii in range(3):
+    #         here.c4[ii]=int(digits[ii+7])
+    # product(waiters)
 
-    #     for j in range(3) :
-    #         here.c2[j] = 0
-    #         here.c3[j] = random.randint(-64, 63)
-    #         here.c4[j] = random.randint(-127, 0)
-    #     for row in range(4) :
-    #         for column in range(row + 1) :
-    #             v = random.randint(-64, 63)
-    #             v1 = random.randint(-64, 63)
-    #             here.score_matrix[row][column] = v
-    #             here.score_matrix[column][row] = here.score_matrix[row][column]
-    #             here.score_matrix1[row][column] = v1
-    #             here.score_matrix1[column][row] = here.score_matrix1[row][column]
-    #             v = random.randint(-64, 63)
-    #             v1 = random.randint(-64, 63)
-    #             here.arb_matrix[row][column] = v
-    #             here.arb_matrix[column][row] = v
-    #             here.arb_matrix1[row][column] = v1
-    #             here.arb_matrix1[column][row] = v1
-    #
-    #             translate(here.score_matrix, [row, column])
-    #             translate(here.score_matrix, [column, row])
-    #             translate(here.score_matrix1, [row, column])
-    #             translate(here.score_matrix1, [column, row])
-    #             translate(here.arb_matrix, [row, column])
-    #             translate(here.arb_matrix, [column, row])
-    #             translate(here.arb_matrix1, [row, column])
-    #             translate(here.arb_matrix1, [column, row])
-    #             # translate(here.delta_matrix, [row, column])
-    #             # translate(here.delta_matrix, [column, row])
-    #
-    #     here.c1 = 1
-    #     # here.c2 = [40 + random.randint(-30, 30) for i1 in range(4)]
-    #     # here.c3 = [5 + random.randint(-5, 50) for i1 in range(4)]
-    # for i in range(5) :
-    #     here = waiters[i]
-    #     v = random.randint(-64, 63)
-    #     v1 = random.randint(-64, 63)
-    #     for row in range(4) :
-    #         for column in range(row + 1) :
-    #             here.score_matrix[row][column] = v
-    #             here.score_matrix[column][row] = here.score_matrix[row][column]
-    #             here.score_matrix1[row][column] = v1
-    #             here.score_matrix1[column][row] = here.score_matrix1[row][column]
-    #             here.arb_matrix[row][column] = 0
-    #             here.arb_matrix[column][row] = 0
-    #             here.arb_matrix1[row][column] = 0
-    #             here.arb_matrix1[column][row] = 0
-    #             # here.delta_matrix[row][column] = random.randint(-100, 100)
-    #             # here.delta_matrix[column][row] = here.delta_matrix[row][column]
-    #             translate(here.score_matrix, [row, column])
-    #             translate(here.score_matrix, [column, row])
-    #             translate(here.score_matrix1, [row, column])
-    #             translate(here.score_matrix1, [column, row])
-    #             translate(here.arb_matrix, [row, column])
-    #             translate(here.arb_matrix, [column, row])
-    #             translate(here.arb_matrix1, [row, column])
-    #             translate(here.arb_matrix1, [column, row])
-    #             # translate(here.delta_matrix, [row, column])
-    #             # translate(here.delta_matrix, [column, row])
-    #     for j in range(3) :
-    #         here.c3[j] = 0
-    #         here.c4[j] = 0
+        for j in range(3) :
+            here.c2[j] = 0
+            here.c3[j] = random.randint(-64, 63)
+            here.c4[j] = random.randint(-127, 0)
+        for row in range(4) :
+            for column in range(row + 1) :
+                v = random.randint(-64, 63)
+                v1 = random.randint(-64, 63)
+                here.score_matrix[row][column] = v
+                here.score_matrix[column][row] = here.score_matrix[row][column]
+                here.score_matrix1[row][column] = v1
+                here.score_matrix1[column][row] = here.score_matrix1[row][column]
+                v = random.randint(-64, 63)
+                v1 = random.randint(-64, 63)
+                here.arb_matrix[row][column] = v
+                here.arb_matrix[column][row] = v
+                here.arb_matrix1[row][column] = v1
+                here.arb_matrix1[column][row] = v1
+
+                translate(here.score_matrix, [row, column])
+                translate(here.score_matrix, [column, row])
+                translate(here.score_matrix1, [row, column])
+                translate(here.score_matrix1, [column, row])
+                translate(here.arb_matrix, [row, column])
+                translate(here.arb_matrix, [column, row])
+                translate(here.arb_matrix1, [row, column])
+                translate(here.arb_matrix1, [column, row])
+                # translate(here.delta_matrix, [row, column])
+                # translate(here.delta_matrix, [column, row])
+
+        here.c1 = 1
+        # here.c2 = [40 + random.randint(-30, 30) for i1 in range(4)]
+        # here.c3 = [5 + random.randint(-5, 50) for i1 in range(4)]
+    for i in range(5) :
+        here = waiters[i]
+        v = random.randint(-64, 63)
+        v1 = random.randint(-64, 63)
+        for row in range(4) :
+            for column in range(row + 1) :
+                here.score_matrix[row][column] = v
+                here.score_matrix[column][row] = here.score_matrix[row][column]
+                here.score_matrix1[row][column] = v1
+                here.score_matrix1[column][row] = here.score_matrix1[row][column]
+                here.arb_matrix[row][column] = 0
+                here.arb_matrix[column][row] = 0
+                here.arb_matrix1[row][column] = 0
+                here.arb_matrix1[column][row] = 0
+                # here.delta_matrix[row][column] = random.randint(-100, 100)
+                # here.delta_matrix[column][row] = here.delta_matrix[row][column]
+                translate(here.score_matrix, [row, column])
+                translate(here.score_matrix, [column, row])
+                translate(here.score_matrix1, [row, column])
+                translate(here.score_matrix1, [column, row])
+                translate(here.arb_matrix, [row, column])
+                translate(here.arb_matrix, [column, row])
+                translate(here.arb_matrix1, [row, column])
+                translate(here.arb_matrix1, [column, row])
+                # translate(here.delta_matrix, [row, column])
+                # translate(here.delta_matrix, [column, row])
+        for j in range(3) :
+            here.c3[j] = 0
+            here.c4[j] = 0
     while True :
         random.seed()
         inheritance(waiters)
