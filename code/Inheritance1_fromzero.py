@@ -1452,7 +1452,7 @@ if __name__ == "__main__" :
     basicab.c4 = [0 for i in range(4)]
     waiters = []
     # f=open("log.txt")
-    for i in range(int(waiter_num/2)) :
+    for i in range(int(waiter_num)) :
         here = AI(8, 0, 100)
         waiters.append(here)
     #     f.readline()
