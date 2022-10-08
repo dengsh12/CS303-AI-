@@ -395,7 +395,7 @@ class AI(object) :
 
             i = 6
             while i >= 0 :
-                if chessboard[0][i] != color :
+                if chessboard[7][i] != color :
                     break
                 j = 7
                 while j > height :
